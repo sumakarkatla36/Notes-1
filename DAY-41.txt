@@ -1,0 +1,89 @@
+master --> feature
+PR from feature to main
+comments
+merge/rebase -->extra commit
+merge commits triggers DEV deployment.
+
+git is a content tracker
+
+Ex: man git 
+
+git hash-object --stdin : it will give commit id
+
+example: $ echo "Hello world" | git hash-object --stdin
+commitid or SHA Code : 802992c4220de19a90767f3000a79a31b98d0df7
+
+whatever we store in git we will get a SHA code.
+
+git is a key value pair.
+
+commit ID is the key
+content is the value
+
+if we change the content the commit id will also change
+
+echo "content" | git hash-object -w --stdin
+
+git cat-file commit-id -p --> you will get total information
+
+HOW TO CREATE A BRANCH ?
+git branch -M feature-1
+
+HOW TO PRINT COMMIT ID ?
+git log --oneline
+
+when the development is complete then the developer will merge the code by using pull request.
+
+
+protection rules are given to master it is very important
+
+git is nothing but content tracker
+the content is tracked by using git hash-object --stdin
+
+commit ID --> 802992c4220de19a90767f3000a79a31b98d0df7 or SHA Code
+
+SHA code -->40 charcters universal unique id for the content
+
+git is a key/value pair
+
+commit ID -->key
+content   -->Value
+
+if you change the content.commit id will also change.
+
+.git has everything in it.
+
+to know the details about the file the command used is
+$ git cat-file -p 1c47553db59047374381da8e4227a6c98a346c8b
+tree 7b9c8ea53ad969b680ae3d655a701504f4259b5f
+author Sumakarkatla89 <sumakarkatla89.com> 1770649663 +0530
+committer Sumakarkatla89 <sumakarkatla89.com> 1770649663 +0530
+
+iam pushing my code to git
+
+to know the commit id for the content the command used is
+
+echo "content" | git hash-object --stdin
+
+$ echo "content" | git hash-object --stdin
+d95f3ad14dee633a758d2e331151e950dd13e4ed
+
+git cat-file -p <commit-id>
+
+✅ Correct way to store the object
+
+You must use -w (write):
+
+echo "content" | git hash-object -w --stdin
+
+TO READ THE FILE USING COMMIT ID :
+
+$ git cat-file -p d95f3ad14dee633a758d2e331151e950dd13e4ed
+content
+
+
+
+
+
+
+
