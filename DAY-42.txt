@@ -1,0 +1,136 @@
+Merge conflicts
+---------------------
+if git finds different code in the same line number.then git will give merge conflicts
+
+main 
+-----
+main --> conflict -->developer 1 created conflict branch from main branch.
+
+developer-2
+---------------
+if there is a conflict the developer need to understand that the main branch is moved forward
+
+he need to pull those changes in local,resolve conflicts with other developer-1
+
+*** we need to do pull before push
+
+Jenkins --> CICD
+-----------------
+continuous integration tool
+
+create an ec2 server
+install java and jenkins in it.
+
+systemctl start jenkins
+
+systemctl 
+
+centos is the user-name
+DevOps321 is the passwd
+
+
+jenkins passwd : fd28030f4ac44f408c0aceee9fd1ebfa
+
+whatever we do in jenkins it is called job,job is nothing but work to do.
+
+freestyle job is not everyone using now a days,no one is preferrring now,restoring baack to normal stage is difficult.because of this
+we have moved to pipeline.
+
+jenkins pipelines
+-----------------
+hello world pipeline.
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+
+1 person can handle --> one acre of agriculture
+
+100 acres --> you need lot of resources
+
+owwner --> employee resources --> distribute the work
+
+master --> slave older version
+master --> agent new versions
+
+we need to add agents,agents is nothing but another server to do the work.
+
+how you configure master and agent architecture in jenkins ?
+if we have multiple agents.
+--> we will go the manage jenkins.
+--> then click on nodes
+--> click new node,give the name of the node,and permanant agent.
+--> click on create node.
+--> no of executors is 3 based on our jobs
+--> remote root directory == /var/jenkins-agent -->everything in jenkins will be saved here like jenkins configuration.
+
+there are two launch methods.
+1.master asking agent to work --> launch agent via ssh --> master is connecting to agent via ssh protocol.
+HOST == PRIVATE IP.
+
+2.employee coming to master and asking for .
+
+while running the code the jenkins will check about what is the agent 
+what is the node.and run the code.
+
+post is used after the Build.
+
+the pipeline  may be success or failed there are some conditions that we can run after the build.
+
+-->environment is used as key value pairs.
+
+Options
+--------
+
+options {
+        timeout(time: 1, unit: 'HOURS') 
+    }
+	
+it has to complete within the given time else it will give the error.
+
+disableConcurrentBuilds() it is used to not run multiple builds at a time.
+ 
+parameters{}
+---------------
+   parameters {
+        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+
+        text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
+
+        booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
+
+        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+
+        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+    }
+	
+we can access the parameters inside the code 
+steps{
+ echo "Hello ${params.PERSON}"
+ }
+Triggers
+-----------
+build triggers are used when to trigger the build.
+
+webhook
+---------
+hook is the connection between one to another.
+
+if developer pushes the code to git we want the pipeline to run automatically
+
+git --> jenkins
+
+event comes in git like code push
+
+then the webhook gives the information about the changes 
+
+then the code will run in jenkins
+
