@@ -1,0 +1,275 @@
+the command to connect to the server is
+ssh -i sumakar.pem ec2-user@IP ADDRESS
+
+ls --> list subdirectories
+
+cd --> change directory
+
+cd / --> root directory
+
+ls -l --> lengthy format
+
+d --> directory
+
+- --> file
+
+cd .. --> onee step back
+
+ls -l -->alphabetical order in lengthy format
+
+ls -lr -->reverse alphabetical order
+
+ls -lt --> based on timing
+
+ls -ltr -->oldest file on top
+
+ls -la --> it will show the hidden folders in the directory
+
+CRUD
+-----
+CREATE
+READ
+UPDATE
+DELETE
+
+HOW TO CREATE A FILE ?
+the command used for creating a file is touch <file-name>
+Ex: touch sumakar
+
+to create a folder the command used is Ex : mkdir devops
+
+how to update a file with content?
+cat > <file-name>
+
+> --> replaces the content
+>> -->appends the content
+
+ex: cat >> sample
+Hi,iam Learning DevOps
+press enter and then ctrl+d
+
+it will appends the content.
+
+reading the file
+------------------
+cat file-name
+
+remove file and folder
+-----------------------
+rm <file-name>
+
+remove the folder
+-----------------
+rmdir <folder-name> it will remove only empty directory
+
+to remove the folder which contains files 
+------------------------------------------------
+rmdir -r <folder-name> -r is nothing but recurssive.
+
+copy 
+-----------
+cp is the copy command
+
+we have to know where we have to copy from and paste it.
+
+cp <source> <Destination>
+
+ex: cp /etc/passwd passwd
+
+copy command is used for copying only files but not folders we can copy the folder by using the command
+
+cp -r aws devops
+
+cut 
+--------------
+mv --> move
+within the same folder if you use mv command,it works as rename.
+
+mv sivakumar siavakumar-1 --> this will rename the file from sivakumar sivakumar-1
+
+cp /etc/passwd passwd
+
+to highlight a text the command used is 
+
+grep<word-to-find><folder>
+
+ex: grep bin passwd
+
+
+Linux is case sensitive.
+
+grep -i gives case insensitive.
+
+Piping
+-------------
+pipe-1 output is given as pipe-2 input
+
+cat passwd | grep -i devops
+
+in passwd file it will give devops as output
+
+| --> piping one command output is given as input to another command
+
+pipes are most commonly used.
+
+wget vs curl
+---------------
+to download a file in linux the command used is wget wget==webget
+
+wget<link> it will download the file in the linux
+
+curl
+-----
+downloads the content directly on to the terminal
+
+cut and awk
+-------------
+delimiter is used to cut the url
+
+: --> it is the delimiter
+
+/ --> it is the delimiter
+
+echo --> it is used to print the content
+
+echo https://www.jenkins.io/doc/book/installing/ | cut -d / -f1
+
+we will use cut command to divide into fragments based on the delimiter.
+
+awk 
+----
+awk -F / '{print $1F }'
+
+awk command is used to divide the data based on coloums
+
+head <file-name> --> it will give first ten lines
+tail <file-name> --> it will give last ten lines
+
+Editors
+--------
+VIM editor --> visually improved
+
+vim editor codes
+-----------------
+:q --> quit the file
+:wq --> write and quit 
+:q! --> dont save just quit
+:set nu -->Line numbers will instantly appear in the left margin. 
+:set no nu -->The line numbers will now be hidden by default whenever you open a file with vim. 
+gg --> takes to the top
+
+colon/command mode
+-------------------
+:/<word-to-search> --> search from the top
+:?<word-to-search> --> search from the bottom
+
+sudo cp/etc/ssh/sshd_config sshd_config
+sudo chown ec2-user:ec2-user sshd_config
+
+to undo the changes in the file
+goto esc mode and press u to undo the changes
+
+:noh --> clear last search
+
+replace the content/word
+--------------------------
+:s/<word-to-find>/<word-to-replace> --> replace the word where your cursor.
+
+ex :s/root/ROOT/g 
+
+:%s/sbin/SBIN/g sbin is replaced by SBIN at all occurance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
