@@ -1,0 +1,191 @@
+permissions
+-------------
+- rw-   rw-    r--
+  user  group  others
+R ->4
+W ->2
+X ->1  -->to run commands and shell scripts
+
+  
+user=owner ==the file who created is called user or owner
+group ==user a group lo unnadu is called group
+others ==testing team,development team
+
+in linux when you create user a group with same name is created.
+
+when we create a user sumakar,a group with the same name sumakar will be created.
+
+users has read access,write access
+group has read access,write access
+others has only read access
+
+if we want to change the access the command used is chmod u+x this command will give user to execution access
+
+chmod u+x sample
+
+user management
+-----------------
+ramesh joined devops team
+
+how to create a user in linux?
+
+the command used to create a user in linux is useradd ramesh 
+
+user created by using root user.
+
+to get the sudo access the command used is sudo su -
+
+how we know weather a user is created or not ?
+in the /etc/passwd their is a entry will be created.
+
+how to get the group entries?
+getent group command is used to list the groups
+
+
+vim /etc/ssh/sshd_config -->enable password authentication
+sshd -t this command is used whenever we do a mistake in the file it will give the error.
+systemctl restart sshd  --> restart the system.
+
+now to login to the user the command is 
+ssh sumakar@ip-address
+it will ask for the user password.
+then it will login to the user
+
+2.how to create a group?
+groupadd devops
+
+3.every user will have a primary group and a secondary grouo
+
+ramesh should be added to devops group
+
+this is the way the user added to group -->usermod -g devops sumakar
+
+chown -->even file owner cant run this command
+
+only sudo user can change the ownership
+
+4.we will create testing group ,we will give sumakar secondary access to testing
+
+usermod -aG testing ramesh
+
+5.to remove sumakar from testing group
+gpasswd -d sumakar testing
+
+user is leaving the organization
+--------------------------------------
+userdel <user-name> -->it will removes the user from linux system.
+
+* if we want to delete a user the user should be logout from the server
+* if we want to delete a user the user must be in no other groups.
+
+to delete the group
+---------------------
+groupdel sumakar
+
+process management
+-------------------
+ps -ef will show the processes running in background.
+
+how do we know a process is runnning or not?
+ps -ef | grep jenkins
+
+there are two types of processes 
+1.foreground process
+2.background process
+
+when process strucks we need to kill it
+kill <p-id>
+
+when some process stuck even kill can't kill it
+
+kill -9 --> forcefully kill the process.
+
+package management
+-------------------
+yum command is used to install packages ==RHEL=CENTOS=FEDORA=AWS LINUX 2
+
+Amazon-linux-extras 
+
+yum list available | wc -l
+
+yum list available | grep mysql
+
+yum search mysql
+
+yum install nginx -y
+
+raheem joined,how can you enable ssh access through private key
+-----------------------------------------------------------------
+1.create raheem user 
+2.give me your public-key,keep your private key securely
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
