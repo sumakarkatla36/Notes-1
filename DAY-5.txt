@@ -1,0 +1,48 @@
+public ip vs private ip
+-------------------------
+192.168.1.3 -->IP
+
+within the network private ip
+latency: time to respond
+security
+cost 
+
+NAT --> Network address Translation
+
+DNS -->DOMAIN NAME SYSTEM
+
+AMAZON.US -->IP address 
+not in our home network
+not in our jio network
+exchange point
+cables--> US
+
+monolithic vs microservices
+-----------------------------
+
+
+
+
+
+
+microservices
+-------------------
+maintanance is easy
+language can be anything
+individual deployments
+server resources can be less
+autoscaling is very easy
+
+
+1.products -->heavy load
+2.user -->heavy Load
+3.payments --> less load
+
+Security Groups
+-----------------
+private servers dont get public ip address
+
+frontend applications -->80
+backend applications  -->8080
+
+ 
