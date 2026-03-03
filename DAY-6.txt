@@ -1,0 +1,159 @@
+putty 
+--------
+putty needs
+1.user name
+2.private-key/password
+3.IP-Address
+
+putty will do the following connection like
+ssh -i private-key/password username@IP-Address
+
+how to configure putty
+------------------------
+1.we need to give session name in saved session
+2.Then goto connection data and give the username as ec2-user
+3.then goto ssh,auth,credentials give the private key to the private key space
+
+Note: if we have a pem file we need to conveert the pem file to ppk file using
+puttygen go to the puttygen load the pem file then save the file as ppk.
+
+then give the ip-address in the ip address bar then click open.then the session will be opened.
+
+superputty
+----------------
+to configure putty import the putty settings then load the ppk 
+give the ip-address then click ok to start the session.
+
+install nginx
+--------------
+sudo yum install  nginx -y --> to install 
+sudo systemctl start nginx --> to start the nginx
+sudo systemctl status nginx --> to check the status nginx
+sudo systemctl enable nginx --> to enable the nginx to access from the website.
+
+nginx
+------
+where should be the html files load from nginx?
+/usr/share/nginx/html
+
+get the sudo access
+sudo sudo-
+
+cd /usr/share/nginx/html/
+
+we will find an index.html
+
+if we want to apply another html pages then we need to put another html pages.
+
+front end and backend will connect thrrough apis
+
+Linux file system structure
+----------------------------
+/ --> root folder for linux
+boot --> when server is getting started,server refers this directory and config from grub.config
+dev --> external devices
+etc -->extra configuration
+home --> user home directories are created here
+lib/lib64 -->libraries
+/media --> cd/dvd drive
+/mnt --> extra disks mount here
+/opt --> optional.manual installation of services or applications will be downloaded here
+/proc --> running processes id will be there in proc
+/proc/cpuinfo --> it will give the cpu information
+/root --> root user home folder
+/bin --> cat,vim,yum,every command will be here.
+/sbin --> system commands.
+/tmp --> temporary files
+/usr --> user directory.
+/log --> log files will be stored here.
+
+sym link and hard link
+------------------------
+inode is the representation for file and folder.
+how we get to know the inode value?
+ls -li --> these command will show the location and inode value.
+inode is the representation of file and folder inside the memory it is a number.
+
+symlink
+--------
+symlink is nothing but shortcut.=symbolic link.
+
+we need to create a shortcut for a file then the shortcut is called symlink.
+
+how to create a symlink?
+ln -s /home/ec2-user/hello/tmp/hello-soft
+ln --> link
+-s -->symbolic link
+
+actual file inode and symlink file inode is different 
+it will point out only content but the inode value is different.
+
+Hardlink
+---------
+hard link point out inode location.
+how to craete a hard link ?
+ln /home/ec2-user/hello hello-hard\
+
+whenever we delete a symlink file then there is no file.the file is deleted.
+
+whenever we delete a hardlink file then still the file is not deleted.it will be deleted only when all the files of the inode wwill be deleted.
+
+whenever the original file is deleted in symlink then the file is deleted completely
+whenever the original file is deleted in hardlink then the file is not deleted completely
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
