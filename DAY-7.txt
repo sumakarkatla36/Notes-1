@@ -1,0 +1,218 @@
+Roboshop configure
+------------------
+1.web/frontend tier
+2.App/Api/Backend tier
+3.DB tier
+
+DB apps are called statefull
+
+App/web tier applications are stateless
+
+CRUD Over database
+------------------
+create
+Read
+Update
+Delete
+
+nginx is reverse proxy
+
+RHEL = FEDORA = CENTOS = AWS LINUX
+
+devops-practice
+Username = centos
+Password = DevOps321
+
+we need to create a firewall
+-----------------------------
+security group name = allow-all
+description         = allowing all firewalls
+vpc                 = default vpc
+
+inbound rule
+------------------
+type   = ALL TCP
+SORUCE = ANYWHRE IPV4
+
+outbound rules
+-----------------
+as it is
+
+web 
+-----
+http = web server
+
+nginx
+-------------- 
+etc/nginx
+
+it will give all the information.we can configure anything.
+
+cd /usr/share/nginx/html
+
+Interview Question ?
+-----------------------
+forward proxy vs reverse proxy
+----------------------------------
+Vpn --> virtual private cloud
+
+servers are not aware of clients are behind.
+
+vpn is also is another computer
+
+vpn is used for anonymous access.hiding our identity
+
+this is called forward proxy
+
+forward proxies cant understand real clients
+
+forward proxies are secure because companies can impose restrictions not to use
+  particular sites,,file uploads,and to monitor use of internet behaviour
+  
+clients are aware of proxy,servers are not aware.
+
+Reverse Proxy
+-----------------
+in reverse proxy clients are not aware of server side.
+
+applications use reverse proxy to secure their code.
+
+nginx is the example of reverse proxy.
+
+HTTP STATUS
+--------------------
+200 --> success
+300 -->redirect/tmp
+failure response
+------------------
+400,401,402,404 --> client side error
+
+500 -->server side error,pureely project error.
+
+forward proxy vs reverse proxy
+------------------------------------
+vpn --> virtual private cloud.
+
+servers are not aware of clients are behind vpn
+
+vpn is used for anonymous access
+
+forward proxies cant understand real clients
+
+for security also forward proxies are used --> companies can impose restrictions not to use particular sites,file uploads and
+to monitor use of internet behaviour
+
+clients are aware of proxy,servers are not aware
+
+users will use.
+
+Reverse proxy
+-----------------
+facebook has its load balancer when we try to reach we will get only load balancer.
+
+in reverse proxy clients are not aware of server side
+applications use reverse proxy to secure their code.
+
+companies will use it.to secure their server
+
+HTTP STATUS
+------------
+200 --> success
+300 --> redirect
+
+failure responses
+400,402,403,404 --> client side error
+
+500 --> server side error
+
+304 --> caching purpose
+
+cache server --> whenever a user download something it will stored under cache server
+                 second user will get from cache server
+
+reverse proxy is mainly used for load balancing and security purpose
+
+Mongodb
+---------
+whenever we cant find a repo then we need to give externally by adding a repo file in the server
+
+127.0.0.1 --> this belongs to local host,local host is nothing but mongodb server
+
+it is saying within the server only it will give connection we need outside of the server to connect 
+
+so that we need to add configuration.
+
+Catalogue 
+----------
+we need to keep cataloguee in between web and mongodb
+web will request to catalogue.catalogue will request to mongodb
+
+npm install should be run where package.json will present.
+
+catalogue is connecting to mongodb so that we should give mongodp private ip-address
+
+if we run systemctl start catalogue the app folder server.js will run.
+
+if we change anything in the systemd file we have to daemon reload it.
+
+for connectring to mongodb we need a client
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
