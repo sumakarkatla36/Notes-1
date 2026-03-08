@@ -1,0 +1,134 @@
+DNS 
+-----------------------
+Domain Name System
+
+facebook.com
+
+browser cache --> checks IP address exist or not
+
+if its not in browser cache then it will check with os weather facebook.com exits
+os will check in its cache weather facebook.com exits or not.
+
+ISP resolver  --> DNS resolution is responsibility of ISP
+
+OS --> it will contact ISP resolver --> I need IP address for facebook.com
+
+ISP Resolver cache --> checks IP address exists or not
+
+ISP resolver is configured with root servers
+
+root servers is nothing but few organizations will form root servers.
+
+there are 13 root servers
+
+DNS WILL BE MANAGED BY THESE 13 ROOT SERVERS
+
+root servers has TLD (TOP LEVEL DOMAIN)(.com.in.org.uk.us)
+
+It will connect to these top level domain
+
+ISP Resolver --> .com TLD
+
+Root servers --> TLD (TOP LEVEL DOMAIN)
+
+Domain registers
+----------------
+godaddy
+hostinger
+
+Hostinger --> katla.space
+
+.space --> TLD
+
+Hostinger responsibility is to update,sumakar with details bought katla.space
+and the name servers are
+
+ns-1113.awsdns-11.org
+
+ns-148.awsdns-18.com
+
+ns-1611.awsdns-09.co.uk
+
+ns-905.awsdns-49.net
+
+we are using aws cloud we need some records automatically created for that
+we need to do name servers transformation
+
+created hostedzones in aws .we got nameservers
+
+Hostinger responsibility to update name servers with TLD 
+
+katla.space --> aws nameservers will come.
+
+in aws we need to create records in that A record will match the IP Address
+
+browser
+  
+os
+
+ISP
+
+Root SERVERS
+
+TLD
+
+Browser --> cache --> os --> cache --> ISP --> cache --> rootservers -->  
+
+for mongodb we will use t3.medium 
+
+we will configure mongodb,because we need data for configuring.
+
+we will configure mongorepo
+
+databases will come with local access only we need to give remote access
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
