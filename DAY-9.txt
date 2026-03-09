@@ -1,0 +1,76 @@
+errors
+-----------
+web --> roboshop.conf lo catalogue ip we need to check
+
+catalogue is running or not
+data loaded to mongodb or not
+catalogue.service mongodb ip is good or not
+Mongodb --> remote 0.0.0.0 allowed or not
+we need to check on firewalls
+
+
+we need to create 5 t2.micro and 1 t3.medium for mongodb
+
+we need to add the mongodb repo file in etc/yum.repos/mongodb.repo
+add the mongodb version
+
+after that install mogodb and enable and start the mongodb then in /etc/mongod.conf give the bind ip as 0.0.0.0
+restart the service by using systemctl restart mongod
+
+then in aws create the records for the mongodb
+
+for web we need to give public ip because users will use it in internet for others
+we need to give private ip.
+
+we  need to check the status of the service and also we need to check weather the ports are open are not by using the command netstat -lntp
+
+**next we need to configure catalogue
+
+disable the default version
+
+by doing this catalogue will connect to mongodb
+
+we need products for this project we need to load the products in catalogue server or mongodb server we can use any server
+
+the products will be there in catalogue.zip
+
+we need to install mongodb client so that we can load the schema
+
+** we need to configure the web 
+
+** we need to configure redis next
+  redis is a cache database 
+  apps --> redis --> DB
+  apps will hit on redis if its not on redis then it will go to actual database 
+  then the data will be stored on the redis for easy access
+  redis will run on port number 6379
+  
+** next we need to configure user module
+** next we need to configure cart module
+
+how to install appliccation in linux 
+--------------------------------------
+we should have a server
+
+nodejs, .net,java,python,php.golang etc
+
+install the programming language
+
+creating a directory
+
+creating a seperate user for that application
+
+downloading the application
+
+install the dependencies
+
+we are giving in how to run in /etc/systemd/system/application.service
+
+systemctl start application
+
+systemctl enable application
+
+**we need to configure mysql next
+
+
+
