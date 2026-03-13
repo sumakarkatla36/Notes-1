@@ -1,0 +1,134 @@
+1.Signuo for git
+2.we need to generate keys or use existing keys
+3.keep public key in github
+4.create .ssh folder in user directory if not exists
+5.create cconfig file in .ssh without extension
+6.keep the github config
+
+/user/user-name/.ssh
+
+ubuntu --> /home/users/user-name/.ssh
+
+github --> a folder in internet with some tracking capabilities
+
+clone a repo from git
+----------------------
+clone --> downloading a copy
+git clone <URL>
+
+1.add to stagine area/temp area/temp
+git add <file-name>
+if there are multiple files then
+git add .
+
+2.then commit into the repo
+ git commit -m "iam practicing git"
+ 
+3.push into central repo
+ git push origin <branch-name>
+ 
+git is only for code not for files
+
+we can add everything at a time
+
+git add . ; git commit -m "message" ; git push origin main
+
+you have already existing folder
+------------------------------------
+git init --> initialize as git repo
+then we need to create 
+git branch -M main
+
+git remote add origin <ssh url>
+
+git push -u origin main
+
+
+#!/bin/bash --> shebang
+
+shell script and bash script both are same
+
+to print anything the command used is echo
+
+to update the url git remote set-url origin <git-url>
+
+sh script name is used to run the shell script
+ex sh 01-hello.sh
+
+Variables
+-------------
+variables is the dry concept --> do not repeat yourself
+
+variable_name=value
+
+Person1=Ramesh
+Person2=suresh
+
+chnage in one location will effect changes in all the lines
+
+
+Argumemnts --> args
+
+sh 02-variables.sh robert jhon
+
+shell script will take
+$1=robert
+$2=jhon
+
+read -s command is used to hide the details of the user
+
+data types
+-----------
+int float double string char long boolean array arraylist map set 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

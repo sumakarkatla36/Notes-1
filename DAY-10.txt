@@ -1,0 +1,28 @@
+t3.medium --> mongodb,shipping,mysql
+
+first configue mongodb
+
+next configure redis
+
+next mysql
+
+next catalogue,user,cart
+
+Deployment
+---------------
+dveloper will update the code
+
+he will push to some location as zip
+
+download the new code
+
+stop the server --> stop catalogue
+
+remove old code
+
+unzip new code
+
+restart the server
+
+RabiitMQ --> Messaging que database
+
