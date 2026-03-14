@@ -1,0 +1,81 @@
+conditions
+------------
+if(expression){
+   statements if expression is true
+}
+else{
+   statements if expression is false
+}
+
+if(expression){
+   statements if expression is true
+}
+else if{
+   statements if expression is false
+}
+else if{
+   statements if expression is false
+}
+else{
+    statements if expression is false
+}
+
+if(today != "sunday"){
+   print "go to school"
+}
+else{
+   print "happy holiday!"
+}
+
+20 
+if 20 is greater tghan 100 then print ,given no is greater than 20 otherwise
+print less than 100
+
+if(20>100){
+ print "20 greater than 100"
+}
+else{
+ print"given number is less than 100"
+}
+
+in shell 
+greater than       --> -gt
+less than          --> -lt
+greater than equal --> -ge
+less than equal    --> -le
+
+install mysql through shell script
+-----------------------------------------
+steps:
+1.check user is root or not
+2.if root proceed,if not root stop and send the error,run with root user
+
+function --> code that is repeated again ,you can keep in function and call it whenever you want
+
+Function_name(){
+  statements to run
+}
+validate(){
+  statements to run
+}
+
+function_name --> calling name
+
+Redirections 
+--------------
+command > temp.log --> by default success output only stores here
+
+1 --> success
+2 --> failure
+& -->  both success and failure
+
+>  --> replace previous output
+>> --> without replacing it will append
+
+logs we need to compulsory save
+
+$? --> exit status of previous command
+$0 --> we will get script name
+
+
+
