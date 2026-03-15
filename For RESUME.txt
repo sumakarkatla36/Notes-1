@@ -1,0 +1,4 @@
+Ansible is Idempotence
+
+we can run any no of times if there is a user it will not create if there is no user it will create it is called idempotence
+
