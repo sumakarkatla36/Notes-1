@@ -1,0 +1,20 @@
+Using loops install any no.of packages
+-----------------------------------------
+user will call as sh 13-install-packages.sh git mysql gcc postfix net-tools
+
+$# --> no of arguments
+$@ --> all arguments
+
+1.check root user or not
+2.if root user 
+   check package is already installed or not 
+     if installed skip it and tell user,already installed
+	 if not installed,install it
+	 validate it
+ if not user 
+  throw the error
+  
+exit status echo $? if it gives 0 it is installed if it gives 1 the package is not installed
+
+1.delete old log files,disk usage monitor
+

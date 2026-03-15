@@ -1,0 +1,161 @@
+Ansible
+-------------
+shell disadvantages
+
+1.shell script will not work in all linux distributions
+2.scalability issues will be there.difficult to manage more no of servers
+3.error handling and validations need to do manual
+4.readability
+5.shell will only work with linux,will not work with external systems
+
+ansible is a configuration management tool
+-------------------------------------------
+configure your laptop
+to make server ready for application is called configuring server
+
+it is used for deployment
+-------------------------
+1.stop the server
+2.remove the old code 
+3.download the new code
+4.restart the server
+
+Idempotence
+-------------
+if you run a program multiple times,that can create samething multiple times
+
+if not exitst it will create if exist it will ignore
+
+even you run your program infinite times,it should not create any damage
+
+error handling is easy
+
+readable and maintainable
+
+valut is feature to store password
+
+rich modules 
+
+agentless
+
+
+CRUD
+------
+Create the configuration
+Read the configuration
+update the configuration
+Delete the configuration
+
+we need two servers in ansible
+one is server and other one is node
+
+sshpass -p "DevOps321" ssh centos@ip-address this is not secure
+by this we can login to the node server
+
+one configuraion server will connect to node servers and run the commands 
+
+one ccommand will run at a time in n no of servers
+
+ansible is push based architecture
+
+chef is a pull based architecture
+
+pull based configure
+-----------------------
+chef server
+
+we will configure agents to check every one hour
+
+24*7 =168 times to connect to server
+
+time waste 
+
+resources waste like cpu and memory
+
+pull configuration has one advantage --> at the end of ansible we can discuss
+
+How to install ansible
+-----------------------
+sudo yum install ansible -y
+
+wherever ansible installed it is called ansible server
+
+in nodes we dont need to install ansible
+
+to connect from ansible server to node server is by using
+ansible -i ip-address, all -e ansible_user=centos -e ansible_password=DevOps321 m ping
+
+-i == inventory
+-i == we can give multiple servers
+
+in ansibles there are modules or collection
+in linux everything is called as command
+
+-m is for module
+
+ansible is from redhat and centos creators
+
+we have great documentation for ansible
+
+ansible-->community-->documentation
+
+how to install a package in ansible
+-------------------------------------
+- name: Install ntpdate
+  ansible.builtin.package:
+    name: ntpdate
+    state: present
+ansible -i ip-address, all -e ansible_user=centos -e ansible_password=DevOps321 --become -m yum -a "name=nginx state=present"
+
+for giving the user as root user --become is the command
+	
+to start the module in ansible the command is service
+state=started,stop,restarted
+
+by using commands is not good we need to do it by writing playbook
+
+one by one module --> succuess or failure we need to check it is hard
+
+we keep all the commands in a file keep some validations conditions loops variables now run the file
+
+in ansible we can keep all this files in ansible playbook
+
+playbook --> a file of modules/collections
+
+YAML --> Yet another markup language
+
+DTO -->DATA TRANSFER OBJECT
+XML -->XTENSIVE MARKUP LANGUGAE
+
+<USER>
+  <EMAIL></EMAIL>
+  <PASSWORD></PASSWORD>
+</USER>
+
+HTML -->HYPER TEXT MARKUP LANGUGAE
+
+JSON --> JAVA SCRIPT OBKECT NOTATION
+
+JSON HAS 
+{
+"EMAIL":"INFO@GMAIL.COM"
+"PASSWORD":"ADMIN@123"
+}
+
+YAML
+-----------------
+email:"devops@gmail.com"
+passwd:"DevOps@321"
+
+in inventory file we can keep the list of servers that can ansible will connect to
+
+to get the inventory files 
+ansible -i inventory roboshop --list-hosts
+
+ansible-playbook -i inventory -e ansible_user=centos -e ansible_password=DevOps321 01-playbook.yaml
+
+
+
+
+
+
