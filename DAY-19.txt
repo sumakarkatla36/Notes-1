@@ -1,0 +1,26 @@
+ansible-playbook -i inventory -e ansible_user=centos -e ansible_password=DevOps321 03-multi-play.yaml
+
+Variables
+-----------------------------
+DRY --> do not repeat yourself
+
+variables we keep aside from the code so that code will not be disturbed when we are doing changes 
+
+variables holds a value you can use it anywhere
+
+when we give variables from play level and task level the ansible will take the variable from task level
+
+DATA TYPES
+-------------
+list 
+map
+boolean
+key,value
+
+conditions
+-------------------
+id roboshop
+if exitsts it will skip,if not it will not create
+
+somevariable=$[command]
+
